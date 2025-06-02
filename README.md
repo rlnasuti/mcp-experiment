@@ -12,9 +12,14 @@ Follow these steps to install dependencies and run the server:
    ```
 2. **Start the server**:
    ```bash
-   poetry run python mcp_experiment/server.py
+   poetry run uvicorn mcp_experiment.server:app --reload
    ```
-   The server will start an SSE endpoint at [http://127.0.0.1:8000/jsonrpc](http://127.0.0.1:8000/jsonrpc).
+   The server will start an SSE endpoint at [http://127.0.0.1:8000/](http://127.0.0.1:8000/).
+2. **Start the host**:
+   ```bash
+   chainlit run host.py --port 8001
+   ```
+   The server will start the chainlit application on port 8001
 
 ## API Endpoint
 
